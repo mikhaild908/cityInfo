@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace CityInfo.API.Services
 {
-    public class LocalMailService
+	public class LocalMailService : IMailService
     {
 		private string _mailTo = @"admin@test.com";
 		private string _mailFrom = @"no-reply@test.com";
