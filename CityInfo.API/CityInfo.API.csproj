@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <Content Remove="appSettings.json" />
+    <Content Remove="appSettings.Production.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="nlog.config">
@@ -27,5 +28,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="appSettings.json" />
+    <None Include="appSettings.Production.json" />
   </ItemGroup>
 </Project>
