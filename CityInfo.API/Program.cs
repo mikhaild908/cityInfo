@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using NLog.Extensions.Logging;
 
 namespace CityInfo.API
 {
@@ -19,7 +20,9 @@ namespace CityInfo.API
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .Build();
+                   .UseStartup<Startup>()
+		           //.ConfigureLogging(f => f.AddProvider(new NLogLoggerProvider()))
+                   .ConfigureLogging(f => f.AddNLog())
+                   .Build();
     }
 }
