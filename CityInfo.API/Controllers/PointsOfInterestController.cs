@@ -22,7 +22,7 @@ namespace CityInfo.API.Controllers
 		{
 			try
 			{
-				throw new System.Exception("an exception occurred"); // this is for testing the logging feature
+				//throw new System.Exception("an exception occurred"); // this is for testing the logging feature
 
 				var city = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.Id == cityId);
 
